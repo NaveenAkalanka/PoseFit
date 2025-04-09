@@ -1,0 +1,167 @@
+/* Hero Section */
+.regn-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent; /* No background for hero, let it be transparent */
+  margin-top: 1vh; /* Removed negative margin */
+  width: 100%;
+}
+
+.regn-hero-content > * {
+  opacity: 1; /* No animation */
+  transform: translateY(0); /* No animation */
+  margin-left: 100vh;
+  margin-right: 100vh;
+}
+
+/* Hero Content */
+.regn-hero-content {
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* Hero Heading (Register page) */
+.regn-h1 {
+  font-size: 3.5rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: bold;
+  color: #3c3c3c;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  width: 100%;
+  margin-left: -2vh;
+}
+
+/* Registration Form Container */
+.regn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Full height of the screen */
+  background: transparent;
+}
+
+.regn-p{
+  width: 100%;
+  margin-left: -2vh;
+}
+
+/* Feedback Form Container */
+.regn-feedback-form {
+  background-color: white;
+  border-radius: 3rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding:5rem;
+  width: 100%;
+  max-width: 600px; /* Form width adjusted for better fit */
+  margin-top: -50vh;  /* Space from the top */
+  opacity: 1;  /* No animation */
+  transform: translateY(0);  /* No animation */
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10vh;
+  
+}
+
+/* Heading */
+.regn-feedback-form h2 {
+  font-size: 2rem;
+  color: #6a5acd;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Form Input Fields */
+.regn-feedback-form div {
+  margin-bottom: 1.5rem;
+}
+
+/* Input Labels */
+.regn-feedback-form label {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Text Inputs and Textarea */
+.regn-feedback-form input[type="text"],
+.regn-feedback-form input[type="email"],
+.regn-feedback-form input[type="password"] {
+  width: 100%;  /* Full width */
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: border 0.3s ease;
+}
+
+.regn-feedback-form input[type="text"]:focus,
+.regn-feedback-form input[type="email"]:focus,
+.regn-feedback-form input[type="password"]:focus {
+  outline: none;
+  border-color: #6a5acd;
+}
+
+/* Submit Button */
+.regn-feedback-form button {
+  width: 100%;  /* Full width */
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: white;
+  background-color: #6a5acd;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 3vh;
+  margin-right: -3vh;
+}
+
+.regn-feedback-form button:hover {
+  background-color: #396af1;
+}
+
+/* Success & Error Message */
+.regn-message {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.regn-success {
+  color: green;
+}
+
+.regn-error {
+  color: red;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .regn-hero h1 {
+    font-size: 3rem;  /* Adjusted font size for mobile */
+  }
+  .regn-feedback-form {
+    padding: 1.5rem;  /* Reduce padding for smaller screens */
+  }
+
+  .regn-feedback-form h2 {
+    font-size: 1.8rem;  /* Smaller heading size on mobile */
+  }
+
+  .regn-feedback-form input,
+  .regn-feedback-form button {
+    font-size: 1rem;  /* Adjust font size for smaller screens */
+  }
+}

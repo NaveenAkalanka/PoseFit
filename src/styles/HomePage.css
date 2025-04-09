@@ -1,0 +1,80 @@
+/* HomePage.css */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  overflow: hidden; /* Prevents extra scrolling */
+}
+
+/* Dynamic spacing between sections using flexbox */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+  overflow: visible; 
+}
+
+.feature-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1vh; /* Adjusted gap from bottom */
+  overflow: visible;
+  gap: 20vh; /* Reduced gap between hero and feature section */
+  height: auto;
+  max-height: 100%;
+  width: 88%;
+  margin-top: 3vh;
+}
+
+/* Ensure feature images scale dynamically */
+.feature-image {
+  width: 90%; /* Reduced size */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Navbar.css - Adjust navbar to fit within viewport */
+
+/* HeroSection.css - Remove padding/margin for dynamic control */
+.hero {
+  padding: 0;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+.hero-content {
+  margin-top: -15vh; /* Reduced space between hero and feature section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh; /* Dynamic gap between hero section components */
+  overflow: visible;
+}
+
+/* Responsive Styles */
+@media (max-width: 1300px) {
+  .home-container {
+    justify-content: flex-start;
+  }
+  .hero {
+    margin-top: 5vh;
+  }
+  .feature-section {
+    gap: 2vh;
+    width: 100%;
+    max-height: 80vh;
+  }
+  .feature-image {
+    width: 90%; /* Adjusted for smaller screens */
+  }
+  .hero-content {
+    margin-top: -5vh;
+  }
+}

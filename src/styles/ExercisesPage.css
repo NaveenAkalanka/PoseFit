@@ -1,0 +1,118 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+  overflow-y: auto; /* Allow natural scrolling */
+
+}
+
+.exercise-container {
+  overflow: hidden; /* Prevents scrollbars from appearing during animation */
+}
+
+.exercise-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto;
+  opacity: 0;
+  height: auto; /* Ensures height is not miscalculated */
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+
+/* Ensure the cards are responsive and don’t overflow */
+.exercise-grid .exercise-card {
+  flex: 1 1 300px;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+/* Make the grid responsive for large screens */
+@media (min-width: 1900px) {
+  .exercise-grid {
+    padding-left: 100px; /* Add space on the left */
+    padding-right: 100px; /* Add space on the right */
+  }
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vh;
+  position: relative;
+  margin: 30px auto;
+  margin-bottom: 5vh;
+  opacity: 0;
+  height: auto; /* Ensures height is not miscalculated */
+  animation: fadeInUp 3s ease-out forwards;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 50px;
+  margin-top: 3vh;
+  margin-bottom: -5vh;
+}
+
+.hero-section h1 {
+  font-size: 2.2vw;
+  font-weight: bold;
+  color: #3C3C3C;
+  margin-bottom: 10px;
+  margin-top: 3%;
+  line-height: 1.1;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.3s ease-out 0.7s forwards;
+}
+
+.search-icon {
+  position: absolute;
+  left: 18px;
+  font-size: 20px;
+  color: #6A5ACD;
+  transition: color 0.3s ease-in-out;
+}
+
+.search-bar {
+  left: 50px;
+  padding: 12px;
+  padding-left: 50px; /* Added space between icon and text */
+  width: 100%;
+  border-radius: 50px;
+  font-size: 18px;
+  border: 3px solid transparent;
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(180deg, #A665F6 57%, #396AF1 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  color: #6A5ACD;
+  transition: all 0.3s ease-in-out;
+}
+
+
+@media (max-width: 1300px) {
+  .search-container {
+    gap: 30px;  /* Adds more space between elements */
+  }
+  .exercise-grid {
+    gap: 30px;  /* Adjust gap between exercise cards */
+  }
+  .hero-section {
+    margin-top: 5vh;
+  }
+  .hero-section h1 {
+    font-size: 5.5vw;
+  }
+  .search-container {
+    width: 40vh;
+  }
+}

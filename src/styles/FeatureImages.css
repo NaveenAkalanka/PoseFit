@@ -1,0 +1,89 @@
+.feature-section {
+    display: flex;
+    justify-content: space-between; /* Keeps images apart on large screens */
+    align-items: center;
+    max-width: 1920px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Images */
+  .feature-image {
+    max-width: 46%; /* Ensures proper scaling on large screens */
+    height: auto;
+    border-radius: 20px;
+  }
+  
+  /* Ensure left image stays left-aligned */
+  .left-image {
+    align-self: flex-start;
+  }
+  
+  /* Ensure right image stays right-aligned */
+  .right-image {
+    align-self: flex-end;
+  }
+  
+  /* ✅ Force images to stack and center on smaller screens */
+  @media (max-width: 1024px) {
+    .feature-section {
+      flex-direction: column; /* Stack images */
+      justify-content: center;
+      align-items: center;
+      gap: 3vh; /* Space between stacked images */
+    }
+  
+    .feature-image {
+      width: 95%; /* Adjust width to prevent overflow */
+      max-width: 500px;
+      align-self: center; /* Ensure images are centered */
+    }
+  }
+  
+  /* Apply initial state for animation */
+.feature-image {
+    opacity: 0;
+    transform: translateX(-1000px); /* Move left image left */
+    animation: slideInLeft 2.5s ease-out forwards;
+  }
+  
+  /* Right image moves from right */
+  .right-image {
+    transform: translateX(1000px); /* Move right image right */
+    animation: slideInRight 2.5s ease-out forwards;
+  }
+  
+  /* Animation Delay for Staggered Effect */
+  .left-image {
+    animation-delay: 0.5s; /* Left image appears first */
+  }
+  
+  .right-image {
+    animation-delay: 0.5s; /* Right image appears after left */
+  }
+  
+  /* Keyframe for Left Image */
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-1000px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Keyframe for Right Image */
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(1000px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  

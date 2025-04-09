@@ -1,0 +1,138 @@
+/* Global Styles */
+.pose-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 100vw;
+}
+
+/* Header with Controls (Aligned Side by Side with Video) */
+.pose-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+/* Go Back Button */
+.go-back-button {
+  background-image: linear-gradient(45deg, #a665f6 20%, #396af1 100%);
+  color: white;
+  width: 20vh;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+  background-color: #5248cc;
+}
+
+.start-camera-button{
+  background-image: linear-gradient(45deg, #a665f6 20%, #396af1 100%);
+  color: white;
+  width: 20vh;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.start-camera-button {
+  background-color: #5248cc;
+}
+
+/* Camera Selector (Now on the Same Line) */
+.camera-selector {
+  display: flex;
+  align-items: center;
+}
+
+.camera-selector label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.camera-selector select {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-image: linear-gradient(45deg, #a665f6 20%, #396af1 100%);
+}
+
+/* Pose Layout (Video on Right, Canvas in Center) */
+.pose-layout {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Video Preview (Small on Right Side) */
+.pose-video-preview {
+  width: 20vw;
+  height: auto;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: black;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* Drawing Canvas (Centered, 80% of Screen with White Background) */
+.pose-drawing-canvas {
+  width: 80vw;
+  height: 80vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: white;
+  pointer-events: none;
+  border: 2px solid #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 90vw;
+  max-width: 800px;
+  height: 10px;
+  background-color: #ddd;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.progress {
+  width: 50%;
+  height: 100%;
+  background-color: green;
+  border-radius: 5px;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}

@@ -1,0 +1,258 @@
+/* ✅ Navbar Styling */
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: transform 1s ease-in-out, top 1s ease-in-out;
+  animation: slideDown 2s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.navbar-container.hide {
+  transform: translateY(-100%);
+}
+
+.navbar-container.show {
+  transform: translateY(0);
+}
+
+
+.navbar-container.hide {
+  transform: translateY(-100%);
+}
+
+.navbar-container.show {
+  transform: translateY(0);
+}
+
+.navbar-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: none;
+}
+
+/* ✅ Navbar Layout */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1920px;
+  padding: 15px 20px;
+  position: relative;
+  
+}
+
+/* ✅ Logo */
+.logo {
+  width: clamp(100px, 8vw, 150px);
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  margin-left: 20px;
+}
+
+@media (max-width: 1300px) {
+  .navbar {
+    justify-content: center;
+    position: relative;
+    padding-top: 5vh;
+  }
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
+  .mobile-menu-btn {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-top: 5vh;
+  }
+}
+
+@media (min-width: 1300px) {
+  .logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 4px 10px rgba(166, 101, 246, 0.6));
+  }
+}
+
+
+/* ✅ Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(2%, 5vw, 80px);
+  white-space: nowrap;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-size: clamp(14px, 2vw, 24px);
+  font-family: "Barlow", sans-serif;
+  color: rgba(60, 60, 60, 0.8);
+  transition: color 0.3s ease-in-out;
+  position: relative;
+}
+
+.nav-links li a:hover {
+  color: transparent;
+  background: linear-gradient(57deg, #A665F6 57%, #396AF1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(57deg, #A665F6 57%, #396AF1 100%);
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* ✅ Register Button */
+.register-btn {
+  margin-right: 20px;
+  background: none; /* Fully transparent background */
+  padding: 12px 30px;
+  width: 200px;
+  height: 50px;
+  border-radius: 100px;
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: #6A5ACD;
+  position: relative;
+  text-align: center;
+  border: 3px solid transparent; /* Initially no solid border */
+  background-clip: padding-box;
+  overflow: hidden; /* Prevents any artifacts */
+}
+
+/* Gradient Border Effect */
+.register-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px; /* Border thickness */
+  border-radius: 100px;
+  background: linear-gradient(45deg, #A665F6 20%, #396AF1 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* ✅ Hover Effect: Background Gradient & White Text */
+.register-btn:hover {
+  background: linear-gradient(45deg, #A665F6 20%, #396AF1 100%) !important; /* Ensure full fill */
+  color: white !important; /* Change text color to white */
+  border: none; /* Remove border completely */
+}
+
+.register-btn:hover::before {
+  opacity: 0 !important; /* Fully hide the border effect */
+}
+
+
+/* ✅ Mobile Navigation */
+@media (max-width: 1300px) {
+  .nav-links {
+    display: none;
+  }
+  .register-btn {
+    display: none;
+  }
+}
+
+/* ✅ Mobile Menu Button */
+.mobile-menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #6A5ACD;
+  display: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  outline: none;
+}
+
+.mobile-menu-btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width: 1300px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+/* ✅ Mobile Navigation Menu */
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 90px;
+  width: 85%;
+  background: linear-gradient(135deg, #A665F6 20%, #396AF1 100%);
+  border-radius: 12px;
+  padding: 15px 20px;
+}
+
+.mobile-nav.open {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: linear-gradient(45deg, #A665F6 20%, #396AF1 100%);
+  background-color: #f9f8ff;
+  padding: 10px;
+  display: block;
+  border: 2px solid white;
+  border-radius: 50px; /* Optional: Rounds the corners */
+  margin: 5vh 5px;
+  line-height: normal;
+}

@@ -1,0 +1,98 @@
+.exercise-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.exercise-card:hover {
+  transform: scale(1.05);
+}
+
+.exercise-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+h3 {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+p {
+  margin: -5px 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Difficulty section: text and difficulty bar in one line */
+.difficulty {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.difficulty-text {
+  margin-right: 10px;
+}
+
+.difficulty-bar {
+  display: flex;
+  gap: 10px;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.difficulty-segment {
+  flex: 1;
+  height: 6px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+/* Difficulty level color mapping */
+.difficulty-segment.green {
+  background-color: #4caf50;
+}
+
+.difficulty-segment.yellow {
+  background-color: #ffeb3b;
+}
+
+.difficulty-segment.red {
+  background-color: #f44336;
+}
+
+.difficulty-segment.gray {
+  background-color: #ddd;
+}
+
+.posture-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background: linear-gradient(90deg, #8b5cf6, #6d28d9);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.posture-btn:hover {
+  background: linear-gradient(90deg, #6d28d9, #8b5cf6);
+}

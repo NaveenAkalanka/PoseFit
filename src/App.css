@@ -1,0 +1,95 @@
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow", sans-serif;
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+
+  /* Soft Animated Linear Gradient */
+  background: linear-gradient(-45deg, 
+    #b0c3f9,  /* Soft White */
+    #ebf0fe,  /* Light Lavender */
+    #c4d2fb,  /* Soft Purple */
+    #dbc1fb,  /* Gentle Purple */
+    #ede0fd,  /* Muted Lavender */
+    #dbc1fb   /* Soft Blue */
+  );
+  background-size: 300% 300%;
+  animation: softGradientShift 10s ease-in-out infinite alternate;
+}
+
+/* Gradient Animation */
+@keyframes softGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Container Styling */
+.container {
+  max-width: 1900px;
+  margin: 0 auto; /* Center container */
+  padding: 20px;
+  width: 100%;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Utility Classes */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Prevent layout overflow */
+.exercise-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Ensure flex items are centered */
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+.exercise-grid .exercise-card {
+  flex: 1 1 300px;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+/* Make the grid responsive for larger screens */
+@media (min-width: 1900px) {
+  .exercise-grid {
+    padding-left: 50px; /* Add space on the left */
+    padding-right: 50px; /* Add space on the right */
+    width: calc(100% - 100px); /* Adjust width to avoid overflow */
+  }
+}

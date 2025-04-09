@@ -1,0 +1,274 @@
+/* Global styles for the entire exercise page */
+
+/* General Container for the exercise page */
+.exercises-container {
+  display: flex;
+  justify-content: space-between; /* Align header and video side by side */
+  align-items: stretch; /* Ensure both containers take the same height */
+  padding: 2rem;
+  margin: 0 auto;
+  margin-top: 15vh;
+  width: 100%;
+  margin-bottom: 10vh;
+}
+
+/* Vertical Container for Header Elements */
+.exercises-header {
+  display: flex;
+  flex-direction: column; /* Stack the titles and button vertically */
+  justify-content: space-between; /* Equal space between elements */
+  align-items: flex-start; /* Align elements to the left */
+  width: 55%; /* Adjust width to fit beside the video */
+  height: 100%; /* Ensure it's the same height as the video container */
+  margin-right: -10vh; /* Adds some space between the header and the video */
+  margin-left: 10vh;
+}
+
+/* Exercise Title */
+.exercises-title {
+  font-size: 8vw; /* Adjusted size */
+  font-family: "Barlow", sans-serif;
+  font-weight: 1000;
+  color: black;
+  text-align: left;
+  margin-bottom: -5hv;
+  margin-top: -1vh;
+}
+
+/* What is Bicep Curl Title */
+.wahtis-title {
+  font-family: "Barlow", sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 2.5vw; /* Slightly larger than h2 */
+  text-align: left;
+  margin-top: -10vh;
+  margin-bottom: 1.5rem; /* Space between titles */
+}
+
+/* Exercise Description */
+.exercises-description {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.2vw;
+  font-weight: normal;
+  color: black;
+  text-align: left;
+  width: 70%; /* Make description take up half of the screen width */
+  margin-bottom: 1.5rem; /* Space between description and button */
+}
+
+.ctb-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  font-family: "Barlow", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  color: #6a5acd;
+  border: 3px solid transparent;
+  background-image: linear-gradient(45deg, #a665f6 20%, #396af1 100%);
+  width: 15vw;
+  height: 2.5vw;
+  border-radius: 50vw;
+  font-size: 1.2vw;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  /* Add a transform to avoid shifting */
+}
+
+.ctb-btn:hover {
+  color: #6A5ACD;
+  border: 3px solid transparent;
+  background-image: linear-gradient(white, white), linear-gradient(45deg, #A665F6 20%, #396AF1 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  /* Add scaling effect */
+  transform: scale(1.05); /* Adjust the scale value as needed */
+}
+
+/* CTA Button styling */
+.ctb, .ctb-btn {
+  width: 80%;
+  height: 10%;
+}
+
+
+/* Exercise Video Container */
+.exercises-video {
+  width: 60%; /* Adjusted width for the video container */
+  aspect-ratio: 16 / 9; /* Maintains the aspect ratio of the video */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15vh;
+  border-radius: 30px; /* Round the corners of the video container */
+  overflow: hidden; /* Ensures the image inside does not overflow the rounded corners */
+}
+
+/* Exercise Image */
+.exercises-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px; /* Ensure the image also has rounded corners */
+}
+
+
+
+
+
+/* Steps Section */
+.steps-container {
+  width: 100%; /* Ensure it takes up full width */
+  margin-top: 3rem; /* Space between exercise section and steps */
+  margin-left: 13vh;
+  margin-bottom: 5vh;
+}
+
+.steps-title {
+  font-family: "Barlow", sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 2.5vw; /* Slightly larger than h2 */
+  text-align: left;
+  margin-bottom: 5rem;
+}
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; /* Align all step titles to the top */
+  gap: 1rem;
+  width: 87%;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start; /* Align at the top */
+  width: 30%;
+  text-align: left;
+}
+
+.step-text, .step-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 60%;
+  gap: 2vh;
+}
+
+.step-title {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0.5rem;
+  align-self: flex-start; /* Ensures alignment to the top */
+}
+
+.step-description {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.8vw;
+  font-weight: normal;
+  color: black;
+  text-align: left;
+  width: 100%;
+}
+
+.step-image {
+  aspect-ratio: auto;
+  object-fit: cover;
+  max-width: 35%;
+  height: auto;
+  min-height: 100%; /* Match height with step-description */
+  margin-left: -5vh;
+}
+
+
+/* Responsive Design for Screens Below 1300px */
+@media (max-width: 1300px) {
+  .exercises-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8vh;
+  }
+
+  .exercises-header {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .exercises-title{
+    font-size: 15vh;
+    margin-left: -1vh;
+  }
+
+  .wahtis-title{
+    font-size: 3.5vh;
+  }
+
+  .exercises-description{
+    font-size: 2vh;
+    width: 85%;
+  }
+
+  .ctb-btn{
+    height: 3vh;
+    font-size: 2vh;
+  }
+
+  .exercises-video {
+    width: 90%; /* Center the video */
+    display: flex;
+    justify-content: center;
+    margin-right: 8vh;
+    padding: auto;
+    margin-top: 5vh;
+  }
+
+  .steps {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: -11vh;
+  }
+
+  .step {
+    width: 90%; /* Ensure step stays in a single row but stacked */
+    flex-direction: row; /* Keep text and image in one line */
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    margin-bottom: 2rem; /* Add spacing between steps */
+  }
+
+  .steps-title{
+    margin-left: -9.5vh;
+    font-size: 3.5vh;
+  }
+
+  .step-description{
+    font-size: 1.5vh;
+  }
+
+  .step-title{
+    font-size: 3vh;
+  }
+
+  .step-text, .step-image {
+    max-width: 45%;
+    text-align: left;
+    align-items: flex-start;
+    margin-right: 2vh;
+  }
+}
